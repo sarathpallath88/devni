@@ -77,43 +77,7 @@
             width: 100%;
         }
     </style>
-    <style type="text/css">
-        .navbar .megamenu {
-            padding: 1rem;
-        }
 
-        /* ============ desktop view ============ */
-        @media all and (min-width: 992px) {
-
-            .navbar .has-megamenu {
-                position: static !important;
-            }
-
-            .navbar .megamenu {
-                left: 0;
-                right: 0;
-                width: 100%;
-                margin-top: 0;
-            }
-
-        }
-
-        /* ============ desktop view .end// ============ */
-
-
-        /* ============ mobile view ============ */
-        @media(max-width: 991px) {
-
-            .navbar.fixed-top .navbar-collapse,
-            .navbar.sticky-top .navbar-collapse {
-                overflow-y: auto;
-                max-height: 90vh;
-                margin-top: 10px;
-            }
-        }
-
-        /* ============ mobile view .end// ============ */
-    </style>
 
     <script type="text/javascript">
         document.addEventListener("DOMContentLoaded", function () {
@@ -129,15 +93,20 @@
 </head>
 
 <body>
-    <!-- <section class="topstrip">
-        <div class="row">
-            
-            <div class="col-lg-2 phone mt-1"><span style="text-align: start;padding-left: 20px;">call-us:1234567890</span></div>
-            <div class="col-lg-7"></div>
-       
-            <div class="col-lg-3 email mt-1"><span style="text-align:right;">Email-id:devnibotiqueottapalam@gmail.com</span></div>
+    <section id="topstrip" class="topstrip d-flex align-items-center">
+        <div class="container d-flex justify-content-center justify-content-md-between">
+          <div class="contact-info d-flex align-items-center">
+            <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">contact@example.com</a></i>
+            <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
+          </div>
+          <div class="social-icon d-none d-md-flex align-items-center">
+            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+          </div>
         </div>
-    </section> -->
+      </section>
 
     <section class="">
         <div class="container">
@@ -180,106 +149,61 @@
 
         <nav class="navbar navbar-dark bg-danger navbar-expand-lg " id="navbar_top">
             <a href="#" class="navbar-brand"></a>
+            <!-- <div class="collapse-social-icons">
+                <a class="navbar-brand" href=""><i class="fab fa-facebook"></i></a>
+                <a class="navbar-brand" href=""><i class="fab fa-instagram"></i></a>
+              </div> -->
             <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
+
                 <span class="navbar-toggler-icon"></span>
+
             </button>
+
             <div class="navbar-collapse collapse " id="navbar">
+
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                     <li class="nav-item"><a href="index.html" class="nav-link text-white text-capitalize">Home</a></li>
                     <li class="nav-item"><a href="about.html" class="nav-link text-white text-capitalize">About</a></li>
-                    <li class="nav-item"><a href="products.html" class="nav-link text-white text-capitalize">products</a></li>
-                    <li class="nav-item"><a href="photogallery.html" class="nav-link text-white text-capitalize">photo gallery</a>
+                    <li class="nav-item"><a href="products.html"
+                            class="nav-link text-white text-capitalize">products</a></li>
+                    <li class="nav-item"><a href="photogallery.html" class="nav-link text-white text-capitalize">photo
+                            gallery</a>
                     </li>
-                    <li class="nav-item dropdown has-megamenu">
-                        <a class="nav-link dropdown-toggle text-white text-capitalize" href="products.html"
-                            data-bs-toggle="dropdown"> products </a>
-                        <div class="dropdown-menu megamenu" role="menu">
-                            <div class="row g-3">
-                                <div class="col-lg-3 col-6">
-                                    <div class="col-megamenu">
-                                        
-                                        <ul class="list-unstyled">
-                                            <li><div class="custom1 owl-carousel mb-4">
-                                                <!-- <?php
-                                
-                                
-                                                        $rs = mysqli_connect("localhost", "root", "", "ubt");
-                                
-                                                        $row = "select * from scroller";
-                                
-                                                        $res = mysqli_query($rs, $row);
-                                                        while ($result = mysqli_fetch_assoc($res)) {
-                                                        ?>
-                                
-                                
-                                                            <div class="card ">
-                                                                <img src="images/<?php echo $result['Photo'] ?>" class="d-block w-100" alt="pooram">
-                                                            </div>
-                                                        <?php
-                                                        }
-                                                        ?> -->
-                                                <div class="card card-2">
-                                                    <img src="images/pooram2.jpg" class="d-block w-100" alt="pooram2" />
-                                                </div>
-                                                <div class="card card-3">
-                                                    <img src="images/thira.jpg" class="d-block w-100" alt="thira" />
-                                                </div>
-                                                <div class="card card-4">
-                                                    <img src="images/vilakku.jpg" class="d-block w-100" alt="chuttuvilakku" />
-                                                </div>
-                                                <div class="card card-5">
-                                                    <img src="images/chuttuvilakku.jpg" class="d-block w-100" alt="chuttuvilakku2" />
-                                                </div>
-                                            </div></li>
-                                        </ul>
-                                    </div> <!-- col-megamenu.// -->
-                                </div>
-                                <div class="col-lg-3 col-4">
-                                    <div class="col-megamenu">
-                                        <h6 class="title">Title Menu Two</h6>
-                                        <ul class="list-unstyled">
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                        </ul>
-                                    </div> <!-- col-megamenu.// -->
-                                </div><!-- end col-3 -->
-                                <div class="col-lg-3 col-4">
-                                    <div class="col-megamenu">
-                                        <h6 class="title">Title Menu Three</h6>
-                                        <ul class="list-unstyled">
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                        </ul>
-                                    </div> <!-- col-megamenu.// -->
-                                </div>
-                                <div class="col-lg-3 col-4">
-                                    <div class="col-megamenu">
-                                        <h6 class="title">Title Menu Four</h6>
-                                        <ul class="list-unstyled">
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                        </ul>
-                                    </div> <!-- col-megamenu.// -->
-                                </div><!-- end col-3 -->
-                            </div><!-- end row -->
-                        </div> <!-- dropdown-mega-menu.// -->
+
+                    <li class="nav-item"><a href="contact.html" class="nav-link text-white text-capitalize">Contact</a>
                     </li>
-                    <li class="nav-item"><a href="contact.html" class="nav-link text-white text-capitalize">Contact</a></li>
+
                 </ul>
             </div>
         </nav>
+        <!-- <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #42def8;">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbarToggler10" aria-controls="myNavbarToggler10" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="myNavbarToggler10">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+                
+                <ul class="navbar-nav sm-icons">
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                </ul>
+            </div>
+        </nav> -->
+        
+        
     </section>
     <section class="bg-white">
         <div id="carouselExampleFade" class="carousel slide carousel-fade">
@@ -728,7 +652,7 @@
 
     <script>
         $(".custom1").owlCarousel({
-           // margin: 15,
+            // margin: 15,
             loop: true,
             autoplay: true,
             // autoplayTimeout: 5000,
@@ -830,6 +754,7 @@
             })
         })
     </script>
+
     <!-- <script src="js/bootstrap.js"></script> -->
     <!-- <script src="js/jquery.min.js"></script> -->
     <!-- gallery -->
