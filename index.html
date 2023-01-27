@@ -22,7 +22,8 @@
     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
     <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="css/floating-wpp.css">
+    <script type="text/javascript" src="js/floating-wpp.js"></script>
     <title>Devni Botique</title>
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&display=swap");
@@ -95,18 +96,19 @@
 <body>
     <section id="topstrip" class="topstrip d-flex align-items-center">
         <div class="container d-flex justify-content-center justify-content-md-between">
-          <div class="contact-info d-flex align-items-center">
-            <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">contact@example.com</a></i>
-            <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
-          </div>
-          <div class="social-icon d-none d-md-flex align-items-center">
-            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
-          </div>
+            <div class="contact-info d-flex align-items-center">
+                <i class="bi bi-envelope d-flex align-items-center"><a
+                        href="mailto:contact@example.com">contact@example.com</a></i>
+                <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
+            </div>
+            <div class="social-icon d-none d-md-flex align-items-center">
+                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+            </div>
         </div>
-      </section>
+    </section>
 
     <section class="">
         <div class="container">
@@ -202,8 +204,8 @@
                 </ul>
             </div>
         </nav> -->
-        
-        
+
+
     </section>
     <section class="bg-white">
         <div id="carouselExampleFade" class="carousel slide carousel-fade">
@@ -331,7 +333,9 @@
 
 
     <!-- <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="bi bi-arrow-up-square"></i></button> -->
+    
     <div id="preloader"></div>
+   
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>
     <section class="gallery">
@@ -555,7 +559,7 @@
     </section> -->
 
 
-
+    <div id="myButton"></div>
 
     <section class="footer bg-danger l">
         <footer>
@@ -754,7 +758,22 @@
             })
         })
     </script>
-
+    <script type="text/javascript">
+        $(function () {
+            $('#myButton').floatingWhatsApp({
+                phone: '+919645218821',
+                popupMessage: 'Hello, how can we help you?',
+                message: "I'd like to order a pizza",
+                showPopup: true,
+                showOnIE: false,
+                headerTitle: 'Welcome!',
+                headerColor: 'crimson',
+                backgroundColor: 'crimson',
+                buttonImage: '<img src="whatsapp.svg" />'
+                
+            });
+        });
+    </script>
     <!-- <script src="js/bootstrap.js"></script> -->
     <!-- <script src="js/jquery.min.js"></script> -->
     <!-- gallery -->
